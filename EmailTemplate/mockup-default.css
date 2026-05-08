@@ -106,7 +106,7 @@ h4,
 h5,
 h6 {
     Margin: 0;
-    font-family: arial, 'helvetica neue', helvetica, sans-serif;
+    font-family: sans-serif;
     mso-line-height-rule: exactly;
     letter-spacing: 0;
 }
@@ -252,18 +252,18 @@ s {
 
 ul,
 ol {
-    font-family: arial, 'helvetica neue', helvetica, sans-serif;
+    font-family: sans-serif;
     padding: 0px 0px 0px 40px;
     margin-top: 15px;
     margin-bottom: 15px;
 }
 
 ul li {
-    color: #333333;
+    color: #0F3F68;
 }
 
 ol li {
-    color: #333333;
+    color: #0F3F68;
 }
 
 li {
@@ -280,7 +280,7 @@ a {
 }
 
 .es-menu td a {
-    font-family: arial, 'helvetica neue', helvetica, sans-serif;
+    font-family: sans-serif;
     text-decoration: none;
     display: block;
 }
@@ -301,7 +301,7 @@ a {
 .es-footer-body p,
 .es-header-body p,
 .es-infoblock p {
-    font-family: arial, 'helvetica neue', helvetica, sans-serif;
+    font-family: sans-serif;
     line-height: 150%;
     letter-spacing: 0;
 }
@@ -317,12 +317,12 @@ a {
 }
 
 .es-header-body p {
-    color: #333333;
+    color: #0F3F68;
     font-size: 14px;
 }
 
 .es-header-body a {
-    color: #333333;
+    color: #0F3F68;
     font-size: 14px;
 }
 
@@ -331,7 +331,7 @@ a {
 }
 
 .es-content-body a {
-    color: #333333;
+    color: #0F3F68;
     font-size: 14px;
 }
 
@@ -356,7 +356,7 @@ a {
 }
 
 .es-content-body p {
-    color: #333333;
+    color: #0F3F68;
     font-size: 14px;
 }
 
@@ -375,7 +375,7 @@ h1 {
     font-style: normal;
     font-weight: normal;
     line-height: 120%;
-    color: #333333;
+    color: #0F3F68;
 }
 
 h2 {
@@ -383,7 +383,7 @@ h2 {
     font-style: normal;
     font-weight: normal;
     line-height: 120%;
-    color: #333333;
+    color: #0F3F68;
 }
 
 h3 {
@@ -391,7 +391,7 @@ h3 {
     font-style: normal;
     font-weight: normal;
     line-height: 120%;
-    color: #333333;
+    color: #0F3F68;
 }
 
 .es-header-body h1 a,
@@ -417,7 +417,7 @@ h4 {
     font-style: normal;
     font-weight: normal;
     line-height: 120%;
-    color: #333333;
+    color: #0F3F68;
 }
 
 h5 {
@@ -425,7 +425,7 @@ h5 {
     font-style: normal;
     font-weight: normal;
     line-height: 120%;
-    color: #333333;
+    color: #0F3F68;
 }
 
 h6 {
@@ -433,7 +433,7 @@ h6 {
     font-style: normal;
     font-weight: normal;
     line-height: 120%;
-    color: #333333;
+    color: #0F3F68;
 }
 
 .es-header-body h4 a,
@@ -461,11 +461,11 @@ button.es-button {
     background: #f0f0f0;
     border-radius: 0px 0px 0px 0px;
     font-size: 16px;
-    font-family: arial, 'helvetica neue', helvetica, sans-serif;
+    font-family: sans-serif;
     font-weight: normal;
     font-style: normal;
     line-height: 120%;
-    color: #333333;
+    color: #0F3F68;
     text-decoration: none !important;
     width: auto;
     text-align: center;
