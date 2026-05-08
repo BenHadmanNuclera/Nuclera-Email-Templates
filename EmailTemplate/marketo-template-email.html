@@ -1,0 +1,635 @@
+<!doctype html>
+<html style class>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="content-version" content="3.3.53" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    
+    <style data-name="default" type="text/css">
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+      body {
+        font-family: 'Montserrat', sans-serif;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: #ffffff;
+        min-width: 750px;
+      }
+      td,
+      th {
+        padding: 0;
+      }
+      th {
+        font-weight: normal;
+        text-align: left;
+      }
+      .acr-fragment,
+      .acr-component {
+        padding: 0;
+      }
+      .acr-fragment img,
+      .acr-component img {
+        vertical-align: middle;
+      }
+      .divider-container {
+        padding: 5px 0;
+        font-size: 0;
+      }
+      .text-container p {
+        margin: 0;
+      }
+      .text-container ul,
+      .text-container ol {
+        padding-left: 40px;
+      }
+      .image-container {
+        line-height: 0;
+      }
+      .acr-tmp-component img,
+      .image-container img {
+        height: auto;
+      }
+      .button-container a {
+        text-decoration: none;
+        color: inherit;
+      }
+      .acr-structure {
+        background-size: auto;
+        background-repeat: no-repeat;
+      }
+      .structure__table {
+        table-layout: fixed;
+        margin: 0 auto;
+        border-spacing: 0;
+        background-size: auto;
+        background-repeat: no-repeat;
+      }
+      .colspan1,
+      .colspan2,
+      .colspan3,
+      .colspan4,
+      .colspan33,
+      .colspan66,
+      .colspan-n {
+        background-size: auto;
+        background-repeat: no-repeat;
+        box-sizing: border-box;
+      }
+      .colspan1 {
+        width: 100%;
+      }
+      .colspan2 {
+        width: 50%;
+      }
+      .colspan3 {
+        width: 75%;
+      }
+      .colspan4 {
+        width: 25%;
+      }
+      .colspan33 {
+        width: 33%;
+      }
+      .colspan66 {
+        width: 66%;
+      }
+      .acr-grid-column {
+        box-sizing: border-box;
+      }
+      .component-social-container {
+        width: 100%;
+        text-align: center;
+      }
+      span.preheader {
+        display: none !important;
+        visibility: hidden;
+        opacity: 0;
+      }
+      .ExternalClass {
+        width: 100%;
+      }
+      .ExternalClass,
+      .ExternalClass p,
+      .ExternalClass span,
+      .ExternalClass font,
+      .ExternalClass td,
+      .ExternalClass div {
+        line-height: 100%;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        display: block;
+        font-weight: bold;
+      }
+      h1 {
+        font-size: 24px;
+        margin: 19px 0;
+      }
+      h2 {
+        font-size: 24px;
+        margin: 20px 0;
+      }
+      h3 {
+        font-size: 19px;
+        margin: 19px 0;
+      }
+      h4 {
+        font-size: 16px;
+        margin: 21px 0;
+      }
+      h5 {
+        font-size: 13px;
+        margin: 22px 0;
+      }
+      h6 {
+        font-size: 11px;
+        margin: 25px 0;
+      }
+      @media (min-width: 500px) {
+        .is-desktop-hidden,
+        .is-mobile-visible {
+          display: none !important;
+        }
+        .is-desktop-visible {
+          display: block !important;
+        }
+        th.is-desktop-visible {
+          display: table-cell !important;
+        }
+      }
+      .acr-dark-img {
+        display: none;
+      }
+    </style>
+    <style data-name="custom" type="text/css">
+      #acr-64054574 {
+        background-color: #CCE2F7 !important;
+        padding-bottom: 4px !important;
+      }
+      body {
+        background-color: rgb(224, 224, 224) !important;
+        padding-bottom: 4px !important;
+        min-width: 580px;
+      }
+      .structure__table {
+        margin-right: auto !important;
+        margin-left: auto !important;
+        background-color: transparent !important;
+      }
+    </style>
+    <style data-name="grid" type="text/css">
+      .acr-grid-table {
+        width: 100%;
+        table-layout: fixed;
+        border-spacing: 0;
+      }
+
+      .acr-grid-column,
+      .acr-repeat-grid-column {
+        box-sizing: border-box;
+      }
+
+      @media screen and (max-width: 500px) {
+        .acr-grid-table td {
+          display: block;
+          min-width: 100%;
+        }
+      }
+    </style>
+    <style data-name="media-default-max-width-500px" type="text/css">
+      @media screen and (max-width: 500px) {
+        body,
+        #acr-body {
+          width: 100% !important;
+          min-width: 0 !important;
+        }
+        .structure__table {
+          width: 100% !important;
+        }
+        .colspan1,
+        .colspan2,
+        .colspan3,
+        .colspan4,
+        .colspan33,
+        .colspan66,
+        .colspan-n {
+          display: block !important;
+          min-width: 100%;
+        }
+        .is-mobile-hidden,
+        .is-desktop-visible {
+          display: none !important;
+        }
+        .is-mobile-visible {
+          display: block !important;
+        }
+      }
+    </style>
+    <style data-name="media-custom-max-width-500px" type="text/css">
+      @media screen and (max-width: 500px) {
+        body {
+          min-width: 0;
+        }
+        #acr-64054574 {
+          min-width: 0 !important;
+        }
+      }
+    </style>
+    <style data-name="media-default-min-width-500px" type="text/css">
+      @media screen and (min-width: 500px) {
+        .is-desktop-hidden {
+          display: none !important;
+        }
+      }
+    </style>
+    <title>2</title>
+
+    <style data-name="media-custom-prefers-color-scheme-dark" type="text/css">
+      @media (prefers-color-scheme: dark) {
+        .acr-dark-img {
+          display: inline-block !important;
+        }
+        .acr-light-img {
+          display: none !important;
+        }
+      }
+    </style>
+    <!--[if gte mso 9]>
+      <style acrite-mso-css="true">
+        .image-container div {
+          display: block;
+        }
+        .structure__table td {
+          padding: 0;
+          border: none;
+        }
+        .button-container {
+          border: none !important;
+          padding: 0 !important;
+          margin: 0 !important;
+          line-height: normal !important;
+        }
+        .acr-structure {
+          margin: 0 !important;
+        }
+        .acr-component,
+        .acr-tmp-component {
+          margin: 0 !important;
+          border: none !important;
+        }
+        .acr-fragment {
+          margin: 0 !important;
+          border: none !important;
+        }
+        .colspan1,
+        .colspan2,
+        .colspan3,
+        .colspan4,
+        .colspan33,
+        .colspan66,
+        .colspan-n {
+          box-sizing: border-box !important;
+        }
+        .acr-grid-column {
+          box-sizing: border-box !important;
+        }
+        .divider-mso-hidden {
+          border: none !important;
+        }
+        .structure__table {
+          mso-table-lspace: 0pt !important;
+          mso-table-rspace: 0pt !important;
+        }
+        span.preheader {
+          mso-hide: all;
+        }
+        .mso-is-desktop-hidden,
+        .mso-is-desktop-hidden table {
+          mso-hide: all;
+        }
+      </style>
+    <![endif]-->
+  </head>
+
+  <body
+    id="acr-64054574"
+    class
+    data-has-int-mso-hack="true"
+    style="
+      font-size: 16px;
+      font-family: 'Montserrat', sans-serif;
+      color: #0F3F68;
+      text-align: start;
+      font-weight: normal;
+      font-style: normal;
+      min-width: 580px;
+    "
+    data-new-gr-c-s-check-loaded="14.1246.0"
+    data-gr-ext-installed
+  >
+    <span style="display: none !important; visibility: hidden; mso-hide: all; opacity: 0" class="acr-preheader"></span>
+    <div class="acr-container">
+      <div class="acr-structure is-header" data-structure-id="1-1-column" data-structure-name="richtext.structure_1_1_column">
+  <table class="structure__table" align="center" cellpadding="0" cellspacing="0" border="0" width="580" style="width: 580px;">
+    <tbody>
+      <tr>
+        <th class="colspan1" align="center" style="background-color: #CCE2F7; padding: 30px 20px 0px 20px; text-align: center;">
+          
+          <div class="acr-fragment acr-component image-container" style="text-align: center;">
+            <a href="https://www.nuclera.com/..." target="_blank" style="display: inline-block; text-align: center; text-decoration: none;">
+              <img src="https://info.nuclera.com/rs/208-WJR-240/images/Nuclera_Logo_Principal_Blue.png" 
+                   alt="Nuclera" 
+                   width="130" 
+                   height="auto" 
+                   align="center"
+                   style="border:0; display: inline-block; outline:none; text-decoration:none; width:130px; font-size:13px; vertical-align: middle;">
+            </a>
+          </div>
+
+          <div class="acr-fragment acr-component" style="font-size: 16px; font-family: 'Montserrat', sans-serif; color: #ffffff; text-align: center; margin: 10px 0px;">
+            <div class="text-container">
+              <p></p>
+            </div>
+          </div>
+          
+        </th>
+      </tr>
+    </tbody>
+  </table>
+</div>
+      <div
+        class="acr-structure"
+        data-structure-id="1-1-column"
+        data-structure-name="richtext.structure_1_1_column"
+        data-lock-type="editable"
+        data-source-chatid="92ed5328-1b80-4e23-8d27-22f1ea89ded0"
+      >
+        <table class="structure__table" align="center" cellpadding="0" cellspacing="0" border="0" width="580">
+          <tbody>
+            <tr role="presentation">
+              <th
+                class="colspan1"
+                data-source-chatid="7a9995d7-cfd1-4eeb-9790-4d55db9b8bf1"
+                style="background-color: rgb(255, 255, 255); padding: 25px"
+              >
+                <div
+                  class="acr-fragment acr-component"
+                  data-component-id="text"
+                  data-lock-type="editable"
+                  data-source-chatid="9a114656-32e3-4020-a0c3-0ffe6110d032"
+                  data-has-int-mso-hack="true"
+                  id="acr-az02"
+                  contenteditable="false"
+                  style="line-height: 38px"
+                >
+                  <!--[if mso]><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td style="mso-line-height-rule:exactly;font-size: 32px; line-height: 38px; font-family: 'Montserrat', sans-serif; color: #0F3F68; text-align: center; font-weight: bold; font-style: normal;" ><![endif]-->
+                  <div class="text-container" contenteditable="true">
+                    <h1 style="text-align: center">
+                      <span style="font-size: 22px">Pre-Header Text</span>
+                    </h1>
+                  </div>
+                  <!--[if mso]></td></tr></table><![endif]-->
+                </div>
+                                <div
+                  class="acr-fragment acr-component image-container"
+                  data-component-id="image"
+                  style="width: 100%; text-align: center"
+                  data-has-int-mso-hack="true"
+                  data-lock-type="editable"
+                  data-source-chatid="82298f9f-3a81-4e34-879e-88f48f896902"
+                  contenteditable="false"
+                >
+                  <!--[if mso]><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td style="text-align: center;" ><![endif]-->
+                  <img
+                    style="height: auto; width: 100%"
+                    width="530"
+                    height="auto"
+                    src="https://placehold.co/580x400@3x.png?font=montserrat"
+                    class
+                    data-medialibrary-id="13162"
+                  />
+                  <!--[if mso]></td></tr></table><![endif]-->
+                </div>
+                <div
+                  class="acr-fragment acr-component"
+                  data-component-id="text"
+                  style="
+                    font-size: 1px;
+                    font-family: 'Montserrat', sans-serif;
+                    color: rgb(255, 255, 255);
+                    text-align: center;
+                    font-weight: bold;
+                    font-style: normal;
+                    text-decoration: none;
+                    margin: 0px;
+                  "
+                  data-has-ext-mso-hack="true"
+                  data-has-int-mso-hack="true"
+                  data-source-chatid="2bd8edb0-e612-4c8d-b07b-a0c6ce7bb71e"
+                  contenteditable="false"
+                >
+                  <div class="text-container" contenteditable="true">
+                    <h2 style="text-align: center">
+                      <span style="font-size: 24px; font-weight:600; color: #0F3F68">
+                        Header text
+                      </span>
+                      <span style="color: #0F3F68; font-size: 25px; font-weight: normal">
+                        <span style="font-size: 20px"></span>
+                      </span>
+                    </h2>
+                  </div>
+                </div>
+                <!--[if mso]><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td style="padding: 10px 0px;" ><![endif]-->
+                <div
+                  class="acr-fragment acr-component"
+                  data-component-id="text"
+                  style="
+                    font-size: 16px;
+                    font-family: 'Montserrat', sans-serif;
+                    color: rgb(255, 255, 255);
+                    text-align: left;
+                    font-weight: normal;
+                    font-style: normal;
+                    height: auto;
+                    width: 100%;
+                    margin: 10px 0px;
+                    line-height: 18px;
+                  "
+                  data-source-chatid="c8a3807f-5584-466f-8f4d-4e953f1442e1"
+                  data-has-ext-mso-hack="true"
+                  data-has-int-mso-hack="true"
+                  id="acr-0gxf"
+                  contenteditable="false"
+                >
+                  <!--[if mso]><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td style="mso-line-height-rule:exactly;font-size: 16px; font-family: 'Montserrat', sans-serif; color: rgb(255, 255, 255); text-align: left; font-weight: normal; font-style: normal; height: auto; line-height: 18px;" ><![endif]-->
+                  <div class="text-container" contenteditable="true">
+                    <p style="text-align: center"><br /></p>
+                    <p style="text-align: left">
+                      <span style="color: #0F3F68">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      </span>
+                    </p>
+                    <p style="text-align: center"><br /></p>
+                  </div>
+                  <!--[if mso]></td></tr></table><![endif]-->
+                </div>
+                <!--[if mso]></td></tr></table><![endif]-->
+                <div
+                  class="acr-fragment acr-component"
+                  data-component-id="button:2"
+                  style="width: 100%; text-align: center; font-family: sans-serif"
+                  data-lock-type="editable"
+                  data-source-chatid="3066202e-6240-4e71-a911-aa1f32ff286e"
+                  data-has-int-mso-hack="true"
+                  contenteditable="false"
+                >
+                  <!--[if mso]><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td style="padding: 30px 0px; text-align: center;" ><table cellpadding="0" cellspacing="0" border="0" width="125"><tr><td style="mso-line-height-rule:exactly;text-align: center; border-image: initial;" ><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" style="height:30pt; width:200pt; v-text-anchor:middle;" arcsize="20%" fillcolor="rgb(102, 158, 134)" strokeweight="0pt" strokecolor="rgb(102, 158, 134)"><v:stroke opacity="0" /><v:textbox inset="0,0,0,0"><center style="color:rgb(255, 255, 255); font-family:sans-serif; font-size:18px"><![endif]-->
+                  <a href="#" class="arc-link" style="text-decoration: none">
+                    <div
+                      class="button-container"
+                      style="
+                        width: 200px;
+                        text-align: center;
+                        margin: 30px 0px;
+                        max-width: 100%;
+                        display: inline-block;
+                        border: none;
+                        border-radius: 50px;
+                        height: 40px;
+                        line-height: 40px;
+                        background-color: rgb(102, 158, 134);
+                      "
+                      contenteditable="true"
+                    >
+                      <span
+                        style="
+                          color: rgb(255, 255, 255);
+                          font-size: 18px;
+                          font-weight: 800;
+                          font-style: normal;
+                          line-height: 40px;
+                        "
+                        contenteditable="true"
+                      >
+                       Call to Action
+                      </span>
+                    </div>
+                  </a>
+                  <!--[if mso]></center></v:textbox></v:stroke></v:roundrect></td></tr></table></td></tr></table><![endif]-->
+                </div>
+
+              </th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div
+        class="acr-structure is-footer"
+        data-structure-id="1-1-column"
+        data-structure-name="richtext.structure_1_1_column"
+        data-source-chatid="d3746834-d36a-46e2-bc66-11b66cb3ca82"
+      >
+        <table
+          class="structure__table"
+          align="center"
+          cellpadding="0"
+          cellspacing="0"
+          border="0"
+          width="580"
+          height="auto"
+          style="height: auto; width: 580px"
+        >
+          <tbody>
+            <tr>
+              <th
+                class="colspan1"
+                style="background-color: #0F3F68; padding: 20px; background-image: none"
+                data-has-int-mso-hack="true"
+              >
+              
+                <!--[if mso]><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td style="padding: 10px 0px;" ><![endif]-->
+                          <div class="acr-fragment acr-component image-container" style="text-align: center;">
+            <a href="https://www.nuclera.com/..." target="_blank" style="display: inline-block; text-align: center; text-decoration: none;">
+              <img src="https://info.nuclera.com/rs/208-WJR-240/images/Nuclera_Logo_Principal_White.png" 
+                   alt="Nuclera" 
+                   width="130" 
+                   height="auto" 
+                   align="center"
+                   style="border:0; display: inline-block; outline:none; text-decoration:none; width:130px; font-size:13px; vertical-align: middle;">
+            </a>
+          </div>
+                  <div
+                  class="acr-fragment acr-component"
+                  data-component-id="text"
+                  style="
+                    font-size: 14px;
+                    font-family: 'Montserrat', sans-serif;
+                    color: rgb(255, 255, 255);
+                    text-align: left;
+                    font-weight: normal;
+                    font-style: normal;
+                    padding: 0px;
+                    margin: 10px 0px;
+                  "
+                  data-has-ext-mso-hack="true"
+                  data-has-int-mso-hack="true"
+                  data-source-chatid="20ac3b93-da20-4c3b-abb1-aa4f087fe065"
+                  contenteditable="false"
+                >
+                  <!--[if mso]><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td style="font-size: 14px; font-family: 'Montserrat', sans-serif; color: rgb(255, 255, 255); text-align: left; font-weight: normal; font-style: normal; padding: 0px;" ><![endif]-->
+                  <div class="text-container" contenteditable="true">
+                    <p><b>Nuclera Ltd.</b><br>
+                      <span style="font-size:12px">
+One Vision Park, Station Road, Impington, Cambridge, CB24 9NP, United Kingdom<br>
+Registered in England No: 08663936<br>
+VAT No. GB 213 375 628.<br>
+</span><br>
+<b>Nuclera Corp. </b><br>
+<span style="font-size:12px">1000 Technology Park Drive, Suite B, Billerica, Massachusetts, 01821, USA.<br></span>
+</p>
+                  </div>
+                </div>
+                <div
+                  class="acr-fragment acr-component"
+                  data-component-id="text"
+                  style="
+                    font-size: 12px;
+                    font-family: 'Montserrat', sans-serif;
+                    color: rgb(255, 255, 255);
+                    text-align: left;
+                    font-weight: normal;
+                    font-style: normal;
+                    padding: 0px;
+                    margin: 10px 0px;
+                  "
+                  data-has-ext-mso-hack="true"
+                  data-has-int-mso-hack="true"
+                  contenteditable="false"
+                >
+                  <!--[if mso]><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td style="font-size: 12px; font-family: 'Montserrat', sans-serif; color: rgb(255, 255, 255); text-align: left; font-weight: normal; font-style: normal; padding: 0px;" ><![endif]-->
+                  <div class="text-container" contenteditable="false">
+                    <p>
+                      This email was sent to {{lead.Email Address}}. If you no longer wish to receive these emails you may <a class="arc-link" data-nl-type="externalLink" style="text-decoration: underline" href="{{system.unsubscribeLink}}">
+                        Unsubscribe
+                      </a> at any time.<br>
+Copyright © 2026 Nuclera Ltd. All trademarks are the property of Nuclera, Ltd. Visit www.nuclera.com/legal for more info.
+                      <br><a class="arc-link" data-nl-type="externalLink" href="{{system.viewAsWebpageLink}}" style="text-decoration: underline">
+                        View Online
+                      </a>
+                      
+                    </p>
+                  </div>
+                  <!--[if mso]></td></tr></table><![endif]-->
+                </div>
+              </th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!--[if mso]></td></tr></table><![endif]-->
+  </body>
+</html>
