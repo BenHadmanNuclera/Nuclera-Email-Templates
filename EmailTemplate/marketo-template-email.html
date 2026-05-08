@@ -1,635 +1,285 @@
-<!doctype html>
-<html style class>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="content-version" content="3.3.53" />
-    <meta name="x-apple-disable-message-reformatting" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    
-    <style data-name="default" type="text/css">
-      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
-      body {
-        font-family: 'Montserrat', sans-serif;
-        margin: 0 !important;
-        padding: 0 !important;
-        background: #ffffff;
-        min-width: 750px;
-      }
-      td,
-      th {
-        padding: 0;
-      }
-      th {
-        font-weight: normal;
-        text-align: left;
-      }
-      .acr-fragment,
-      .acr-component {
-        padding: 0;
-      }
-      .acr-fragment img,
-      .acr-component img {
-        vertical-align: middle;
-      }
-      .divider-container {
-        padding: 5px 0;
-        font-size: 0;
-      }
-      .text-container p {
-        margin: 0;
-      }
-      .text-container ul,
-      .text-container ol {
-        padding-left: 40px;
-      }
-      .image-container {
-        line-height: 0;
-      }
-      .acr-tmp-component img,
-      .image-container img {
-        height: auto;
-      }
-      .button-container a {
-        text-decoration: none;
-        color: inherit;
-      }
-      .acr-structure {
-        background-size: auto;
-        background-repeat: no-repeat;
-      }
-      .structure__table {
-        table-layout: fixed;
-        margin: 0 auto;
-        border-spacing: 0;
-        background-size: auto;
-        background-repeat: no-repeat;
-      }
-      .colspan1,
-      .colspan2,
-      .colspan3,
-      .colspan4,
-      .colspan33,
-      .colspan66,
-      .colspan-n {
-        background-size: auto;
-        background-repeat: no-repeat;
-        box-sizing: border-box;
-      }
-      .colspan1 {
-        width: 100%;
-      }
-      .colspan2 {
-        width: 50%;
-      }
-      .colspan3 {
-        width: 75%;
-      }
-      .colspan4 {
-        width: 25%;
-      }
-      .colspan33 {
-        width: 33%;
-      }
-      .colspan66 {
-        width: 66%;
-      }
-      .acr-grid-column {
-        box-sizing: border-box;
-      }
-      .component-social-container {
-        width: 100%;
-        text-align: center;
-      }
-      span.preheader {
-        display: none !important;
-        visibility: hidden;
-        opacity: 0;
-      }
-      .ExternalClass {
-        width: 100%;
-      }
-      .ExternalClass,
-      .ExternalClass p,
-      .ExternalClass span,
-      .ExternalClass font,
-      .ExternalClass td,
-      .ExternalClass div {
-        line-height: 100%;
-      }
-      h1,
-      h2,
-      h3,
-      h4,
-      h5 {
-        display: block;
-        font-weight: bold;
-      }
-      h1 {
-        font-size: 24px;
-        margin: 19px 0;
-      }
-      h2 {
-        font-size: 24px;
-        margin: 20px 0;
-      }
-      h3 {
-        font-size: 19px;
-        margin: 19px 0;
-      }
-      h4 {
-        font-size: 16px;
-        margin: 21px 0;
-      }
-      h5 {
-        font-size: 13px;
-        margin: 22px 0;
-      }
-      h6 {
-        font-size: 11px;
-        margin: 25px 0;
-      }
-      @media (min-width: 500px) {
-        .is-desktop-hidden,
-        .is-mobile-visible {
-          display: none !important;
-        }
-        .is-desktop-visible {
-          display: block !important;
-        }
-        th.is-desktop-visible {
-          display: table-cell !important;
-        }
-      }
-      .acr-dark-img {
-        display: none;
-      }
-    </style>
-    <style data-name="custom" type="text/css">
-      #acr-64054574 {
-        background-color: #CCE2F7 !important;
-        padding-bottom: 4px !important;
-      }
-      body {
-        background-color: rgb(224, 224, 224) !important;
-        padding-bottom: 4px !important;
-        min-width: 580px;
-      }
-      .structure__table {
-        margin-right: auto !important;
-        margin-left: auto !important;
-        background-color: transparent !important;
-      }
-    </style>
-    <style data-name="grid" type="text/css">
-      .acr-grid-table {
-        width: 100%;
-        table-layout: fixed;
-        border-spacing: 0;
-      }
-
-      .acr-grid-column,
-      .acr-repeat-grid-column {
-        box-sizing: border-box;
-      }
-
-      @media screen and (max-width: 500px) {
-        .acr-grid-table td {
-          display: block;
-          min-width: 100%;
-        }
-      }
-    </style>
-    <style data-name="media-default-max-width-500px" type="text/css">
-      @media screen and (max-width: 500px) {
-        body,
-        #acr-body {
-          width: 100% !important;
-          min-width: 0 !important;
-        }
-        .structure__table {
-          width: 100% !important;
-        }
-        .colspan1,
-        .colspan2,
-        .colspan3,
-        .colspan4,
-        .colspan33,
-        .colspan66,
-        .colspan-n {
-          display: block !important;
-          min-width: 100%;
-        }
-        .is-mobile-hidden,
-        .is-desktop-visible {
-          display: none !important;
-        }
-        .is-mobile-visible {
-          display: block !important;
-        }
-      }
-    </style>
-    <style data-name="media-custom-max-width-500px" type="text/css">
-      @media screen and (max-width: 500px) {
-        body {
-          min-width: 0;
-        }
-        #acr-64054574 {
-          min-width: 0 !important;
-        }
-      }
-    </style>
-    <style data-name="media-default-min-width-500px" type="text/css">
-      @media screen and (min-width: 500px) {
-        .is-desktop-hidden {
-          display: none !important;
-        }
-      }
-    </style>
-    <title>2</title>
-
-    <style data-name="media-custom-prefers-color-scheme-dark" type="text/css">
-      @media (prefers-color-scheme: dark) {
-        .acr-dark-img {
-          display: inline-block !important;
-        }
-        .acr-light-img {
-          display: none !important;
-        }
-      }
-    </style>
-    <!--[if gte mso 9]>
-      <style acrite-mso-css="true">
-        .image-container div {
-          display: block;
-        }
-        .structure__table td {
-          padding: 0;
-          border: none;
-        }
-        .button-container {
-          border: none !important;
-          padding: 0 !important;
-          margin: 0 !important;
-          line-height: normal !important;
-        }
-        .acr-structure {
-          margin: 0 !important;
-        }
-        .acr-component,
-        .acr-tmp-component {
-          margin: 0 !important;
-          border: none !important;
-        }
-        .acr-fragment {
-          margin: 0 !important;
-          border: none !important;
-        }
-        .colspan1,
-        .colspan2,
-        .colspan3,
-        .colspan4,
-        .colspan33,
-        .colspan66,
-        .colspan-n {
-          box-sizing: border-box !important;
-        }
-        .acr-grid-column {
-          box-sizing: border-box !important;
-        }
-        .divider-mso-hidden {
-          border: none !important;
-        }
-        .structure__table {
-          mso-table-lspace: 0pt !important;
-          mso-table-rspace: 0pt !important;
-        }
-        span.preheader {
-          mso-hide: all;
-        }
-        .mso-is-desktop-hidden,
-        .mso-is-desktop-hidden table {
-          mso-hide: all;
-        }
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" style="background-color:#CCE2F7 !important">
+ <head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta name="x-apple-disable-message-reformatting">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta content="telephone=no" name="format-detection">
+  <title></title><!--[if (mso 16)]>
+      <style type="text/css">
+         a {text-decoration: none;}
       </style>
-    <![endif]-->
-  </head>
-
-  <body
-    id="acr-64054574"
-    class
-    data-has-int-mso-hack="true"
-    style="
-      font-size: 16px;
-      font-family: 'Montserrat', sans-serif;
-      color: #0F3F68;
-      text-align: start;
-      font-weight: normal;
-      font-style: normal;
-      min-width: 580px;
-    "
-    data-new-gr-c-s-check-loaded="14.1246.0"
-    data-gr-ext-installed
-  >
-    <span style="display: none !important; visibility: hidden; mso-hide: all; opacity: 0" class="acr-preheader"></span>
-    <div class="acr-container">
-      <div class="acr-structure is-header" data-structure-id="1-1-column" data-structure-name="richtext.structure_1_1_column">
-  <table class="structure__table" align="center" cellpadding="0" cellspacing="0" border="0" width="580" style="width: 580px;">
-    <tbody>
-      <tr>
-        <th class="colspan1" align="center" style="background-color: #CCE2F7; padding: 30px 20px 0px 20px; text-align: center;">
-          
-          <div class="acr-fragment acr-component image-container" style="text-align: center;">
-            <a href="https://www.nuclera.com/..." target="_blank" style="display: inline-block; text-align: center; text-decoration: none;">
-              <img src="https://info.nuclera.com/rs/208-WJR-240/images/Nuclera_Logo_Principal_Blue.png" 
-                   alt="Nuclera" 
-                   width="130" 
-                   height="auto" 
-                   align="center"
-                   style="border:0; display: inline-block; outline:none; text-decoration:none; width:130px; font-size:13px; vertical-align: middle;">
-            </a>
-          </div>
-
-          <div class="acr-fragment acr-component" style="font-size: 16px; font-family: 'Montserrat', sans-serif; color: #ffffff; text-align: center; margin: 10px 0px;">
-            <div class="text-container">
-              <p></p>
-            </div>
-          </div>
-          
-        </th>
-      </tr>
-    </tbody>
-  </table>
-</div>
-      <div
-        class="acr-structure"
-        data-structure-id="1-1-column"
-        data-structure-name="richtext.structure_1_1_column"
-        data-lock-type="editable"
-        data-source-chatid="92ed5328-1b80-4e23-8d27-22f1ea89ded0"
-      >
-        <table class="structure__table" align="center" cellpadding="0" cellspacing="0" border="0" width="580">
-          <tbody>
-            <tr role="presentation">
-              <th
-                class="colspan1"
-                data-source-chatid="7a9995d7-cfd1-4eeb-9790-4d55db9b8bf1"
-                style="background-color: rgb(255, 255, 255); padding: 25px"
-              >
-                <div
-                  class="acr-fragment acr-component"
-                  data-component-id="text"
-                  data-lock-type="editable"
-                  data-source-chatid="9a114656-32e3-4020-a0c3-0ffe6110d032"
-                  data-has-int-mso-hack="true"
-                  id="acr-az02"
-                  contenteditable="false"
-                  style="line-height: 38px"
-                >
-                  <!--[if mso]><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td style="mso-line-height-rule:exactly;font-size: 32px; line-height: 38px; font-family: 'Montserrat', sans-serif; color: #0F3F68; text-align: center; font-weight: bold; font-style: normal;" ><![endif]-->
-                  <div class="text-container" contenteditable="true">
-                    <h1 style="text-align: center">
-                      <span style="font-size: 22px">Pre-Header Text</span>
-                    </h1>
-                  </div>
-                  <!--[if mso]></td></tr></table><![endif]-->
-                </div>
-                                <div
-                  class="acr-fragment acr-component image-container"
-                  data-component-id="image"
-                  style="width: 100%; text-align: center"
-                  data-has-int-mso-hack="true"
-                  data-lock-type="editable"
-                  data-source-chatid="82298f9f-3a81-4e34-879e-88f48f896902"
-                  contenteditable="false"
-                >
-                  <!--[if mso]><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td style="text-align: center;" ><![endif]-->
-                  <img
-                    style="height: auto; width: 100%"
-                    width="530"
-                    height="auto"
-                    src="https://placehold.co/580x400@3x.png?font=montserrat"
-                    class
-                    data-medialibrary-id="13162"
-                  />
-                  <!--[if mso]></td></tr></table><![endif]-->
-                </div>
-                <div
-                  class="acr-fragment acr-component"
-                  data-component-id="text"
-                  style="
-                    font-size: 1px;
-                    font-family: 'Montserrat', sans-serif;
-                    color: rgb(255, 255, 255);
-                    text-align: center;
-                    font-weight: bold;
-                    font-style: normal;
-                    text-decoration: none;
-                    margin: 0px;
-                  "
-                  data-has-ext-mso-hack="true"
-                  data-has-int-mso-hack="true"
-                  data-source-chatid="2bd8edb0-e612-4c8d-b07b-a0c6ce7bb71e"
-                  contenteditable="false"
-                >
-                  <div class="text-container" contenteditable="true">
-                    <h2 style="text-align: center">
-                      <span style="font-size: 24px; font-weight:600; color: #0F3F68">
-                        Header text
-                      </span>
-                      <span style="color: #0F3F68; font-size: 25px; font-weight: normal">
-                        <span style="font-size: 20px"></span>
-                      </span>
-                    </h2>
-                  </div>
-                </div>
-                <!--[if mso]><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td style="padding: 10px 0px;" ><![endif]-->
-                <div
-                  class="acr-fragment acr-component"
-                  data-component-id="text"
-                  style="
-                    font-size: 16px;
-                    font-family: 'Montserrat', sans-serif;
-                    color: rgb(255, 255, 255);
-                    text-align: left;
-                    font-weight: normal;
-                    font-style: normal;
-                    height: auto;
-                    width: 100%;
-                    margin: 10px 0px;
-                    line-height: 18px;
-                  "
-                  data-source-chatid="c8a3807f-5584-466f-8f4d-4e953f1442e1"
-                  data-has-ext-mso-hack="true"
-                  data-has-int-mso-hack="true"
-                  id="acr-0gxf"
-                  contenteditable="false"
-                >
-                  <!--[if mso]><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td style="mso-line-height-rule:exactly;font-size: 16px; font-family: 'Montserrat', sans-serif; color: rgb(255, 255, 255); text-align: left; font-weight: normal; font-style: normal; height: auto; line-height: 18px;" ><![endif]-->
-                  <div class="text-container" contenteditable="true">
-                    <p style="text-align: center"><br /></p>
-                    <p style="text-align: left">
-                      <span style="color: #0F3F68">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                      </span>
-                    </p>
-                    <p style="text-align: center"><br /></p>
-                  </div>
-                  <!--[if mso]></td></tr></table><![endif]-->
-                </div>
-                <!--[if mso]></td></tr></table><![endif]-->
-                <div
-                  class="acr-fragment acr-component"
-                  data-component-id="button:2"
-                  style="width: 100%; text-align: center; font-family: sans-serif"
-                  data-lock-type="editable"
-                  data-source-chatid="3066202e-6240-4e71-a911-aa1f32ff286e"
-                  data-has-int-mso-hack="true"
-                  contenteditable="false"
-                >
-                  <!--[if mso]><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td style="padding: 30px 0px; text-align: center;" ><table cellpadding="0" cellspacing="0" border="0" width="125"><tr><td style="mso-line-height-rule:exactly;text-align: center; border-image: initial;" ><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" style="height:30pt; width:200pt; v-text-anchor:middle;" arcsize="20%" fillcolor="rgb(102, 158, 134)" strokeweight="0pt" strokecolor="rgb(102, 158, 134)"><v:stroke opacity="0" /><v:textbox inset="0,0,0,0"><center style="color:rgb(255, 255, 255); font-family:sans-serif; font-size:18px"><![endif]-->
-                  <a href="#" class="arc-link" style="text-decoration: none">
-                    <div
-                      class="button-container"
-                      style="
-                        width: 200px;
-                        text-align: center;
-                        margin: 30px 0px;
-                        max-width: 100%;
-                        display: inline-block;
-                        border: none;
-                        border-radius: 50px;
-                        height: 40px;
-                        line-height: 40px;
-                        background-color: rgb(102, 158, 134);
-                      "
-                      contenteditable="true"
-                    >
-                      <span
-                        style="
-                          color: rgb(255, 255, 255);
-                          font-size: 18px;
-                          font-weight: 800;
-                          font-style: normal;
-                          line-height: 40px;
-                        "
-                        contenteditable="true"
-                      >
-                       Call to Action
-                      </span>
-                    </div>
-                  </a>
-                  <!--[if mso]></center></v:textbox></v:stroke></v:roundrect></td></tr></table></td></tr></table><![endif]-->
-                </div>
-
-              </th>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div
-        class="acr-structure is-footer"
-        data-structure-id="1-1-column"
-        data-structure-name="richtext.structure_1_1_column"
-        data-source-chatid="d3746834-d36a-46e2-bc66-11b66cb3ca82"
-      >
-        <table
-          class="structure__table"
-          align="center"
-          cellpadding="0"
-          cellspacing="0"
-          border="0"
-          width="580"
-          height="auto"
-          style="height: auto; width: 580px"
-        >
-          <tbody>
-            <tr>
-              <th
-                class="colspan1"
-                style="background-color: #0F3F68; padding: 20px; background-image: none"
-                data-has-int-mso-hack="true"
-              >
-              
-                <!--[if mso]><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td style="padding: 10px 0px;" ><![endif]-->
-                          <div class="acr-fragment acr-component image-container" style="text-align: center;">
-            <a href="https://www.nuclera.com/..." target="_blank" style="display: inline-block; text-align: center; text-decoration: none;">
-              <img src="https://info.nuclera.com/rs/208-WJR-240/images/Nuclera_Logo_Principal_White.png" 
-                   alt="Nuclera" 
-                   width="130" 
-                   height="auto" 
-                   align="center"
-                   style="border:0; display: inline-block; outline:none; text-decoration:none; width:130px; font-size:13px; vertical-align: middle;">
-            </a>
-          </div>
-                  <div
-                  class="acr-fragment acr-component"
-                  data-component-id="text"
-                  style="
-                    font-size: 14px;
-                    font-family: 'Montserrat', sans-serif;
-                    color: rgb(255, 255, 255);
-                    text-align: left;
-                    font-weight: normal;
-                    font-style: normal;
-                    padding: 0px;
-                    margin: 10px 0px;
-                  "
-                  data-has-ext-mso-hack="true"
-                  data-has-int-mso-hack="true"
-                  data-source-chatid="20ac3b93-da20-4c3b-abb1-aa4f087fe065"
-                  contenteditable="false"
-                >
-                  <!--[if mso]><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td style="font-size: 14px; font-family: 'Montserrat', sans-serif; color: rgb(255, 255, 255); text-align: left; font-weight: normal; font-style: normal; padding: 0px;" ><![endif]-->
-                  <div class="text-container" contenteditable="true">
-                    <p><b>Nuclera Ltd.</b><br>
-                      <span style="font-size:12px">
-One Vision Park, Station Road, Impington, Cambridge, CB24 9NP, United Kingdom<br>
-Registered in England No: 08663936<br>
-VAT No. GB 213 375 628.<br>
-</span><br>
-<b>Nuclera Corp. </b><br>
-<span style="font-size:12px">1000 Technology Park Drive, Suite B, Billerica, Massachusetts, 01821, USA.<br></span>
-</p>
-                  </div>
-                </div>
-                <div
-                  class="acr-fragment acr-component"
-                  data-component-id="text"
-                  style="
-                    font-size: 12px;
-                    font-family: 'Montserrat', sans-serif;
-                    color: rgb(255, 255, 255);
-                    text-align: left;
-                    font-weight: normal;
-                    font-style: normal;
-                    padding: 0px;
-                    margin: 10px 0px;
-                  "
-                  data-has-ext-mso-hack="true"
-                  data-has-int-mso-hack="true"
-                  contenteditable="false"
-                >
-                  <!--[if mso]><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td style="font-size: 12px; font-family: 'Montserrat', sans-serif; color: rgb(255, 255, 255); text-align: left; font-weight: normal; font-style: normal; padding: 0px;" ><![endif]-->
-                  <div class="text-container" contenteditable="false">
-                    <p>
-                      This email was sent to {{lead.Email Address}}. If you no longer wish to receive these emails you may <a class="arc-link" data-nl-type="externalLink" style="text-decoration: underline" href="{{system.unsubscribeLink}}">
-                        Unsubscribe
-                      </a> at any time.<br>
-Copyright © 2026 Nuclera Ltd. All trademarks are the property of Nuclera, Ltd. Visit www.nuclera.com/legal for more info.
-                      <br><a class="arc-link" data-nl-type="externalLink" href="{{system.viewAsWebpageLink}}" style="text-decoration: underline">
-                        View Online
-                      </a>
-                      
-                    </p>
-                  </div>
-                  <!--[if mso]></td></tr></table><![endif]-->
-                </div>
-              </th>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <!--[if mso]></td></tr></table><![endif]-->
-  </body>
+      <![endif]--><!--[if gte mso 9]>
+      <style>sup { font-size: 100% !important; }</style>
+      <![endif]--><!--[if gte mso 9]>
+      <noscript>
+         <xml>
+            <o:OfficeDocumentSettings>
+               <o:AllowPNG></o:AllowPNG>
+               <o:PixelsPerInch>96</o:PixelsPerInch>
+            </o:OfficeDocumentSettings>
+         </xml>
+      </noscript>
+      <![endif]--><!--[if mso]>
+      <xml>
+         <w:WordDocument xmlns:w="urn:schemas-microsoft-com:office:word">
+            <w:DontUseAdvancedTypographyReadingMail/>
+         </w:WordDocument>
+      </xml>
+      <![endif]--><!--[if !mso]><!-- -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"><!--<![endif]-->
+  <style type="text/css">@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+.rollover:hover .rollover-first {
+  max-height:0px!important;
+  display:none!important;
+}
+.rollover:hover .rollover-second {
+  max-height:none!important;
+  display:block!important;
+}
+.rollover span {
+  font-size:0px;
+}
+u + .body img ~ div div {
+  display:none;
+}
+#outlook a {
+  padding:0;
+}
+span.MsoHyperlink,
+span.MsoHyperlinkFollowed {
+  color:inherit;
+  mso-style-priority:99;
+}
+a.es-button {
+  mso-style-priority:100!important;
+  text-decoration:none!important;
+}
+a[x-apple-data-detectors],
+#MessageViewBody a {
+  color:inherit!important;
+  text-decoration:none!important;
+  font-size:inherit!important;
+  font-family:inherit!important;
+  font-weight:inherit!important;
+  line-height:inherit!important;
+}
+.es-desk-hidden {
+  display:none;
+  float:left;
+  overflow:hidden;
+  width:0;
+  max-height:0;
+  line-height:0;
+  mso-hide:all;
+}
+.es-button-border, .es-button-border:hover { background:rgb(0, 98, 161)!important; border-color:rgb(0, 98, 161)!important }
+@media only screen and (max-width:600px) {.es-m-p20b { padding-bottom:20px!important }.es-p-default { }*[class="gmail-fix"] { display:none!important }p, a { line-height:150%!important }h1, h1 a { line-height:120%!important }h2, h2 a { line-height:120%!important }h3, h3 a { line-height:120%!important }h4, h4 a { line-height:120%!important }h5, h5 a { line-height:120%!important }h6, h6 a { line-height:120%!important }h1 { font-size:30px!important; text-align:center }h2 { font-size:26px!important; text-align:center }h3 { font-size:20px!important; text-align:center }h4 { font-size:24px!important; text-align:left }h5 { font-size:20px!important; text-align:left }h6 { font-size:16px!important; text-align:left }.es-header-body h1 a, .es-content-body h1 a, .es-footer-body h1 a { font-size:30px!important }.es-header-body h2 a, .es-content-body h2 a, .es-footer-body h2 a { font-size:26px!important }.es-header-body h3 a, .es-content-body h3 a, .es-footer-body h3 a { font-size:20px!important }.es-header-body h4 a, .es-content-body h4 a, .es-footer-body h4 a { font-size:24px!important }.es-header-body h5 a, .es-content-body h5 a, .es-footer-body h5 a { font-size:20px!important }.es-header-body h6 a, .es-content-body h6 a, .es-footer-body h6 a { font-size:16px!important }.es-menu td a { font-size:13px!important }.es-header-body p, .es-header-body a { font-size:16px!important }.es-content-body p, .es-content-body a { font-size:16px!important }.es-footer-body p, .es-footer-body a { font-size:12px!important }.es-infoblock p, .es-infoblock a { font-size:12px!important }.es-m-txt-c, .es-m-txt-c h1, .es-m-txt-c h2, .es-m-txt-c h3, .es-m-txt-c h4, .es-m-txt-c h5, .es-m-txt-c h6 { text-align:center!important }.es-m-txt-r, .es-m-txt-r h1, .es-m-txt-r h2, .es-m-txt-r h3, .es-m-txt-r h4, .es-m-txt-r h5, .es-m-txt-r h6 { text-align:right!important }.es-m-txt-j, .es-m-txt-j h1, .es-m-txt-j h2, .es-m-txt-j h3, .es-m-txt-j h4, .es-m-txt-j h5, .es-m-txt-j h6 { text-align:justify!important }.es-m-txt-l, .es-m-txt-l h1, .es-m-txt-l h2, .es-m-txt-l h3, .es-m-txt-l h4, .es-m-txt-l h5, .es-m-txt-l h6 { text-align:left!important }.es-m-txt-r img, .es-m-txt-c img, .es-m-txt-l img { display:inline!important }.es-m-txt-r .rollover:hover .rollover-second, .es-m-txt-c .rollover:hover .rollover-second, .es-m-txt-l .rollover:hover .rollover-second { display:inline!important }.es-m-txt-r .rollover span, .es-m-txt-c .rollover span, .es-m-txt-l .rollover span { line-height:0!important; font-size:0!important; display:block }.es-m-txt-r .es-menu td { float:right!important }.es-m-txt-l .es-menu td { float:left!important }.es-m-txt-c .es-menu td { display:inline-block }.es-spacer { display:inline-table }a.es-button, button.es-button { display:inline-block!important; font-size:16px!important; padding:10px 20px 10px 20px!important; line-height:120%!important }.es-button-border { display:inline-block!important }.es-m-fw, .es-m-fw.es-fw, .es-m-fw .es-button { display:block!important }.es-m-il, .es-m-il .es-button, .es-social, .es-social td, .es-menu.es-table-not-adapt { display:inline-block!important }.es-adaptive table, .es-left, .es-right { width:100%!important; border-collapse:separate!important }.es-content table, .es-header table, .es-footer table, .es-content, .es-footer, .es-header { width:100%!important; max-width:600px!important }.adapt-img { width:100%!important; height:auto!important }.es-adapt-td { display:block!important; width:100%!important }.es-mobile-hidden, .es-hidden { display:none!important }.es-container-hidden { display:none!important }.es-desk-hidden { width:auto!important; overflow:visible!important; float:none!important; max-height:inherit!important; line-height:inherit!important }tr.es-desk-hidden { display:table-row!important }table.es-desk-hidden { display:table!important }td.es-desk-hidden { display:table-cell!important }td.es-desk-menu-hidden { display:table-cell!important }.es-m-txt-c .es-menu td.es-desk-menu-hidden { display:inline-block!important }.es-menu td { width:1%!important }table.es-table-not-adapt, .esd-block-html table, .es-m-txt-r .es-menu td, .es-m-txt-l .es-menu td, .es-m-txt-c .es-menu td { width:auto!important }.h-auto { height:auto!important }h1, .es-content-body h1, .es-header-body h1, .es-footer-body h1 { font-size:30px!important; line-height:36px!important }h2, .es-content-body h2, .es-header-body h2, .es-footer-body h2 { font-size:22px!important; line-height:26px!important }h3, .es-content-body h3, .es-header-body h3, .es-footer-body h3 { font-size:20px!important; line-height:24px!important }h4, .es-content-body h4, .es-header-body h4, .es-footer-body h4 { font-size:18px!important; line-height:22px!important }p, td, li, .esd-text p, .es-content-body p, .es-header-body p { font-size:16px!important; line-height:22px!important } }
+@media screen and (max-width:384px) {.mail-message-content { width:414px!important } }</style>
+ </head>
+ <body data-new-gr-c-s-loaded="14.1258.0" data-new-gr-c-s-check-loaded="14.1258.0" data-gr-ext-installed class="body" style="width:100%;height:100%;font-family:Montserrat, sans-serif !important;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding:0;Margin:0;background-color:#CCE2F7 !important;color:#0F3F68 !important">
+  <div dir="ltr" lang="en" class="es-wrapper-color" style="background-color:#CCE2F7 !important;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important"><!--[if gte mso 9]>
+         <v:background xmlns:v="urn:schemas-microsoft-com:vml" fill="t">
+            <v:fill type="tile" color="#f6f6f6"></v:fill>
+         </v:background>
+         <![endif]-->
+   <table width="100%" cellspacing="0" cellpadding="0" class="es-wrapper" role="none" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;padding:0;Margin:0;width:100%;height:100%;background-repeat:repeat;background-position:center top;background-color:#CCE2F7 !important;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important">
+     <tr>
+      <td valign="top" style="padding:0;Margin:0;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important;font-size:16px !important;line-height:22px !important;font-weight:400 !important">
+       <table cellpadding="0" cellspacing="0" align="center" class="es-content" role="none" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;width:100%;table-layout:fixed !important;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important">
+         <tr>
+          <td align="center" class="es-info-area" style="padding:0;Margin:0;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important;font-size:16px !important;line-height:22px !important;font-weight:400 !important">
+           <table bgcolor="#ffffff" align="center" cellpadding="0" cellspacing="0" class="es-content-body" role="none" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#FFFFFF;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important;width:600px">
+             <tr>
+              <td align="left" bgcolor="#cce2f7" style="padding:20px 20px 0;Margin:0;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important;font-size:16px !important;line-height:22px !important;font-weight:400 !important;background-color:#cce2f7">
+               <table width="100%" cellpadding="0" cellspacing="0" role="none" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important">
+                 <tr>
+                  <td align="left" style="padding:0;Margin:0;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important;font-size:16px !important;line-height:22px !important;font-weight:400 !important;width:560px">
+                   <table cellpadding="0" cellspacing="0" role="presentation" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important">
+                     <tr>
+                      <td align="center" class="es-infoblock" style="padding:0;Margin:0;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important;font-size:0;line-height:22px !important;font-weight:400 !important"><a target="_blank" href="https://nuclera.com" style="mso-line-height-rule:exactly;text-decoration:underline !important;color:#0062A1 !important;font-size:12px;font-family:Montserrat, sans-serif !important"><img src="https://info.nuclera.com/rs/208-WJR-240/images/Nuclera_Logo_Principal_Blue.png" alt="" width="130" referrerpolicy title="" class="adapt-img" style="display:block;font-size:14px;border:0;outline:none;text-decoration:none;margin:0"></a></td>
+                     </tr>
+                   </table></td>
+                 </tr>
+               </table></td>
+             </tr>
+             <tr>
+              <td align="left" style="Margin:0;padding:20px 20px 15px;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important;font-size:16px !important;line-height:22px !important;font-weight:400 !important"><!--[if mso]>
+                                             <table style="width:560px" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                   <td style="width:270px" valign="top">
+                                                      <![endif]-->
+               <table cellpadding="0" cellspacing="0" align="left" class="es-left" role="none" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important">
+                 <tr>
+                  <td align="left" class="es-m-p20b" style="padding:0;Margin:0;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important;font-size:16px !important;line-height:22px !important;font-weight:400 !important;width:270px">
+                   <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important">
+                     <tr>
+                      <td align="left" class="es-infoblock" style="padding:0;Margin:0;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important;font-size:16px !important;line-height:22px !important;font-weight:400 !important"><p style="Margin:0;mso-line-height-rule:exactly;font-family:Montserrat, sans-serif !important;line-height:22px !important;letter-spacing:0;color:#0F3F68 !important;font-size:16px !important;font-weight:400 !important">Put your preheader text here</p></td>
+                     </tr>
+                   </table></td>
+                 </tr>
+               </table><!--[if mso]>
+                                                   </td>
+                                                   <td style="width:20px"></td>
+                                                   <td style="width:270px" valign="top">
+                                                      <![endif]-->
+               <table cellpadding="0" cellspacing="0" align="right" class="es-right" role="none" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:right;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important">
+                 <tr>
+                  <td align="left" style="padding:0;Margin:0;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important;font-size:16px !important;line-height:22px !important;font-weight:400 !important;width:270px">
+                   <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important">
+                     <tr>
+                      <td align="right" class="es-infoblock" style="padding:0;Margin:0;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important;font-size:16px !important;line-height:22px !important;font-weight:400 !important"><p style="Margin:0;mso-line-height-rule:exactly;font-family:Montserrat, sans-serif !important;line-height:22px !important;letter-spacing:0;color:#0F3F68 !important;font-size:16px !important;font-weight:400 !important"><a target="_blank" href="https://#" style="mso-line-height-rule:exactly;text-decoration:underline !important;color:#0062A1 !important;font-size:12px;font-family:Montserrat, sans-serif !important">View in browser</a></p></td>
+                     </tr>
+                   </table></td>
+                 </tr>
+               </table><!--[if mso]>
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                             <![endif]--></td>
+             </tr>
+           </table></td>
+         </tr>
+       </table>
+       <table cellspacing="0" cellpadding="0" align="center" class="es-content" role="none" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;width:100%;table-layout:fixed !important;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important">
+         <tr>
+          <td align="center" bgcolor="transparent" style="padding:0;Margin:0;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important;font-size:16px !important;line-height:22px !important;font-weight:400 !important">
+           <table cellpadding="0" cellspacing="0" bgcolor="#ffffff" align="center" class="es-content-body" role="none" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#FFFFFF;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important;width:600px">
+             <tr>
+              <td align="left" style="padding:0;Margin:0;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important;font-size:16px !important;line-height:22px !important;font-weight:400 !important">
+               <table width="100%" cellpadding="0" cellspacing="0" role="none" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important">
+                 <tr>
+                  <td align="left" style="padding:0;Margin:0;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important;font-size:16px !important;line-height:22px !important;font-weight:400 !important;width:600px">
+                   <table cellpadding="0" cellspacing="0" role="presentation" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important;border-top:2px solid #959595;border-right:2px solid #959595;border-bottom:2px solid #959595;border-left:2px solid #959595">
+                     <tr>
+                      <td align="center" style="padding:0;Margin:0;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important;font-size:16px !important;line-height:22px !important;font-weight:400 !important"><img width="600" height="400" class="adapt-img" style="display:block;font-size:14px;border:0;outline:none;text-decoration:none;margin:0" alt=""></td>
+                     </tr>
+                     <tr>
+                      <td align="center" style="padding:0;Margin:0;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important;font-size:0;line-height:22px !important;font-weight:400 !important"><img src="https://placehold.co/580x400@3x.png?font=montserrat&amp;text=OrUseStaticImageNoTextOverlay" alt="" width="600" title="" referrerpolicy class="adapt-img" style="display:block;font-size:14px;border:0;outline:none;text-decoration:none;margin:0"></td>
+                     </tr>
+                   </table></td>
+                 </tr>
+               </table></td>
+             </tr>
+             <tr>
+              <td align="left" style="padding:30px 20px 0;Margin:0;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important;font-size:16px !important;line-height:22px !important;font-weight:400 !important">
+               <table width="100%" cellpadding="0" cellspacing="0" role="none" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important">
+                 <tr>
+                  <td align="left" style="padding:0;Margin:0;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important;font-size:16px !important;line-height:22px !important;font-weight:400 !important;width:560px">
+                   <table cellpadding="0" cellspacing="0" role="presentation" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important">
+                     <tr>
+                      <td align="left" style="padding:0 0 5px;Margin:0;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important;font-size:16px !important;line-height:22px !important;font-weight:400 !important"><h2 style="Margin:0;font-family:Montserrat, sans-serif !important;mso-line-height-rule:exactly;letter-spacing:0;font-size:22px !important;font-style:normal;font-weight:600 !important;line-height:26px !important;color:#0F3F68 !important;margin:0 !important">TITLE HERE</h2></td>
+                     </tr>
+                     <tr>
+                      <td align="left" style="padding:0 0 10px;Margin:0;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important;font-size:16px !important;line-height:22px !important;font-weight:400 !important"><p class="es-m-txt-c" style="Margin:0;mso-line-height-rule:exactly;font-family:Montserrat, sans-serif !important;line-height:22px !important;letter-spacing:0;color:#0F3F68 !important;font-size:16px !important;font-weight:400 !important">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae interdum ligula. Pellentesque feugiat ligula ligula, in interdum dolor aliquet et. Aliquam vitae sem eget erat viverra malesuada.</p></td>
+                     </tr>
+                     <tr>
+                      <td align="left" style="padding:0;Margin:0;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important;font-size:16px !important;line-height:22px !important;font-weight:400 !important"><p class="es-m-txt-c" style="Margin:0;mso-line-height-rule:exactly;font-family:Montserrat, sans-serif !important;line-height:22px !important;letter-spacing:0;color:#0F3F68 !important;font-size:16px !important;font-weight:400 !important">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae interdum ligula. Pellentesque feugiat ligula ligula, in interdum dolor aliquet et. Aliquam vitae sem eget erat viverra malesuada.</p></td>
+                     </tr>
+                   </table></td>
+                 </tr>
+               </table></td>
+             </tr>
+             <tr>
+              <td align="left" style="padding:20px 20px 0;Margin:0;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important;font-size:16px !important;line-height:22px !important;font-weight:400 !important">
+               <table width="100%" cellpadding="0" cellspacing="0" role="none" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important">
+                 <tr>
+                  <td align="left" style="padding:0;Margin:0;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important;font-size:16px !important;line-height:22px !important;font-weight:400 !important;width:560px">
+                   <table cellpadding="0" cellspacing="0" role="presentation" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important">
+                     <tr>
+                      <td align="center" style="padding:20px 0 10px;Margin:0;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important;font-size:16px !important;line-height:22px !important;font-weight:400 !important"><!--[if mso]><a href="" target="_blank" hidden>
+	<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" esdevVmlButton href="" style="height:31px; v-text-anchor:middle; width:148px" arcsize="50%" strokecolor="#0062a1" strokeweight="2px" fillcolor="#0062a1">
+		<w:anchorlock></w:anchorlock>
+		<center style='color:#ffffff; font-family:Montserrat, sans-serif; font-size:11px; font-weight:700; line-height:11px;  mso-text-raise:1px'>Button</center>
+	</v:roundrect></a>
+<![endif]--><!--[if !mso]><!-- --><span class="es-button-border msohide" style="border-style:solid;border-color:#808080;background:#F0F0F0;border-width:2px;display:inline-block;border-radius:50px;width:auto;mso-hide:all;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important"><a href="" target="_blank" class="es-button" style="mso-style-priority:100 !important;text-decoration:none !important;mso-line-height-rule:exactly;color:#FFFFFF !important;font-size:18px;padding:5px 30px;display:inline-block;background:#0062A1 !important;border-radius:50px;font-family:Montserrat, sans-serif !important;font-weight:700 !important;font-style:normal;line-height:21.6px;width:auto;text-align:center;letter-spacing:0;mso-padding-alt:0;mso-border-alt:10px solid #F0F0F0;background-color:#0062A1 !important;border-color:#0062A1 !important"> Button </a></span><!--<![endif]--></td>
+                     </tr>
+                     <tr>
+                      <td align="center" style="padding:0 40px 40px;Margin:0;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important;font-size:0;line-height:22px !important;font-weight:400 !important">
+                       <table width="100%" height="100%" cellspacing="0" cellpadding="0" border="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important">
+                         <tr>
+                          <td style="padding:0;Margin:0;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important;font-size:16px !important;line-height:22px !important;font-weight:400 !important;border-bottom:0px solid #efefef;background:#00000000 none repeat scroll 0% 0%;height:0px;width:100%;margin:0px"></td>
+                         </tr>
+                       </table></td>
+                     </tr>
+                   </table></td>
+                 </tr>
+               </table></td>
+             </tr>
+           </table></td>
+         </tr>
+       </table>
+       <table cellspacing="0" cellpadding="0" align="center" background class="es-footer" role="none" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;width:100%;table-layout:fixed !important;background-color:#0F3F68 !important;background-repeat:repeat;background-position:center top;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important">
+         <tr>
+          <td align="center" bgcolor="transparent" style="padding:0;Margin:0;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important;font-size:16px !important;line-height:22px !important;font-weight:400 !important">
+           <table cellpadding="0" cellspacing="0" bgcolor="#ffffff" align="center" class="es-footer-body" role="none" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#0F3F68 !important;font-family:Montserrat, sans-serif !important;color:#FFFFFF !important;width:600px">
+             <tr>
+              <td align="left" style="padding:20px;Margin:0;font-family:Montserrat, sans-serif !important;color:#FFFFFF !important;font-size:16px !important;line-height:22px !important;font-weight:400 !important;background-color:#0F3F68 !important">
+               <table width="100%" cellpadding="0" cellspacing="0" role="none" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important;background-color:#0F3F68 !important">
+                 <tr>
+                  <td align="left" style="padding:0;Margin:0;font-family:Montserrat, sans-serif !important;color:#FFFFFF !important;font-size:16px !important;line-height:22px !important;font-weight:400 !important;background-color:#0F3F68 !important;width:560px">
+                   <table cellpadding="0" cellspacing="0" role="presentation" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important;background-color:#0F3F68 !important">
+                     <tr>
+                      <td align="center" style="padding:0;Margin:0;font-family:Montserrat, sans-serif !important;color:#FFFFFF !important;font-size:0;line-height:22px !important;font-weight:400 !important;background-color:#0F3F68 !important"><img src="https://info.nuclera.com/rs/208-WJR-240/images/Nuclera_Logo_Principal_White.png" alt="" width="130" referrerpolicy title="" class="adapt-img" style="display:block;font-size:14px;border:0;outline:none;text-decoration:none;margin:0"></td>
+                     </tr>
+                   </table></td>
+                 </tr>
+               </table></td>
+             </tr>
+             <tr>
+              <td align="left" style="padding:20px;Margin:0;font-family:Montserrat, sans-serif !important;color:#FFFFFF !important;font-size:16px !important;line-height:22px !important;font-weight:400 !important;background-color:#0F3F68 !important"><!--[if mso]><table style="width:560px" cellpadding="0" cellspacing="0"><tr><td style="width:270px" valign="top"><![endif]-->
+               <table cellpadding="0" cellspacing="0" align="left" class="es-left es-m-p20b" role="none" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important;background-color:#0F3F68 !important">
+                 <tr>
+                  <td align="left" style="padding:0;Margin:0;font-family:Montserrat, sans-serif !important;color:#FFFFFF !important;font-size:16px !important;line-height:22px !important;font-weight:400 !important;background-color:#0F3F68 !important;width:270px">
+                   <table cellpadding="0" cellspacing="0" role="presentation" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important;background-color:#0F3F68 !important">
+                     <tr>
+                      <td align="center" style="padding:0;Margin:0;font-family:Montserrat, sans-serif !important;color:#FFFFFF !important;font-size:16px !important;line-height:22px !important;font-weight:400 !important;background-color:#0F3F68 !important"><p style="Margin:0;mso-line-height-rule:exactly;font-family:Montserrat, sans-serif !important;line-height:22px !important;letter-spacing:0;color:#FFFFFF !important;font-size:16px !important;font-weight:400 !important"><strong style="font-weight:700 !important;font-family:Montserrat, sans-serif !important;color:#ffffff">Nuclera Ltd.</strong> <br>One Vision Park, Station Road, Impington, Cambridge, CB24 9NP, United Kingdom</p></td>
+                     </tr>
+                   </table></td>
+                 </tr>
+               </table><!--[if mso]></td><td style="width:20px"></td><td style="width:270px" valign="top"><![endif]-->
+               <table cellpadding="0" cellspacing="0" align="right" class="es-right" role="none" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:right;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important;background-color:#0F3F68 !important">
+                 <tr>
+                  <td align="left" style="padding:0;Margin:0;font-family:Montserrat, sans-serif !important;color:#FFFFFF !important;font-size:16px !important;line-height:22px !important;font-weight:400 !important;background-color:#0F3F68 !important;width:270px">
+                   <table cellpadding="0" cellspacing="0" role="presentation" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important;background-color:#0F3F68 !important">
+                     <tr>
+                      <td align="center" style="padding:0;Margin:0;font-family:Montserrat, sans-serif !important;color:#FFFFFF !important;font-size:16px !important;line-height:22px !important;font-weight:400 !important;background-color:#0F3F68 !important"><p style="Margin:0;mso-line-height-rule:exactly;font-family:Montserrat, sans-serif !important;line-height:22px !important;letter-spacing:0;color:#FFFFFF !important;font-size:16px !important;font-weight:400 !important"><strong style="font-weight:700 !important;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important">Nuclera Corp. &nbsp;</strong><br>1000 Technology Park Drive, Suite B, Billerica, Massachusetts, 01821, USA.</p></td>
+                     </tr>
+                   </table></td>
+                 </tr>
+               </table><!--[if mso]></td></tr></table><![endif]--></td>
+             </tr>
+             <tr>
+              <td align="left" style="padding:20px 20px 0;Margin:0;font-family:Montserrat, sans-serif !important;color:#FFFFFF !important;font-size:16px !important;line-height:22px !important;font-weight:400 !important;background-color:#0F3F68 !important">
+               <table width="100%" cellpadding="0" cellspacing="0" role="none" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important;background-color:#0F3F68 !important">
+                 <tr>
+                  <td align="left" style="padding:0;Margin:0;font-family:Montserrat, sans-serif !important;color:#FFFFFF !important;font-size:16px !important;line-height:22px !important;font-weight:400 !important;background-color:#0F3F68 !important;width:560px">
+                   <table cellpadding="0" cellspacing="0" role="presentation" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important;background-color:#0F3F68 !important">
+                     <tr>
+                     </tr>
+                   </table></td>
+                 </tr>
+               </table></td>
+             </tr>
+             <tr>
+              <td align="left" style="padding:20px 20px 0;Margin:0;font-family:Montserrat, sans-serif !important;color:#FFFFFF !important;font-size:16px !important;line-height:22px !important;font-weight:400 !important;background-color:#0F3F68 !important">
+               <table width="100%" cellpadding="0" cellspacing="0" role="none" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important;background-color:#0F3F68 !important">
+                 <tr>
+                  <td align="left" style="padding:0;Margin:0;font-family:Montserrat, sans-serif !important;color:#FFFFFF !important;font-size:16px !important;line-height:22px !important;font-weight:400 !important;background-color:#0F3F68 !important;width:560px">
+                   <table cellpadding="0" cellspacing="0" role="presentation" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;font-family:Montserrat, sans-serif !important;color:#0F3F68 !important;background-color:#0F3F68 !important">
+                     <tr>
+                      <td align="left" style="padding:0;Margin:0;font-family:Montserrat, sans-serif !important;color:#FFFFFF !important;font-size:16px !important;line-height:22px !important;font-weight:400 !important;background-color:#0F3F68 !important"><p style="Margin:0;mso-line-height-rule:exactly;font-family:Montserrat, sans-serif !important;line-height:22px !important;letter-spacing:0;color:#FFFFFF !important;font-size:16px !important;font-weight:400 !important">This email was sent to {{lead.Email Address}}. If you no longer wish to receive these emails you may <a data-nl-type="externalLink" href="{{system.unsubscribeLink}}" class="arc-link" style="mso-line-height-rule:exactly;text-decoration:underline;color:#FFFFFF !important;font-size:14px;font-family:Montserrat, sans-serif !important"> Unsubscribe </a> at any time.<br> Copyright © 2026 Nuclera Ltd. All trademarks are the property of Nuclera, Ltd. Visit www.nuclera.com/legal for more info. <br><a data-nl-type="externalLink" href="{{system.viewAsWebpageLink}}" class="arc-link" style="mso-line-height-rule:exactly;text-decoration:underline;color:#FFFFFF !important;font-size:14px;font-family:Montserrat, sans-serif !important"> View Online </a></p></td>
+                     </tr>
+                   </table></td>
+                 </tr>
+               </table></td>
+             </tr>
+           </table></td>
+         </tr>
+       </table></td>
+     </tr>
+   </table>
+  </div>
+ </body>
 </html>
